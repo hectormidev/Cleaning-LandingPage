@@ -21,249 +21,239 @@ html{
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
-
+/* GLOBAL SECTION */
 body{
 }
 
+img{
+    width: 2rem;
+}
+
+
 header,
-main,
+section,
 footer{
-    padding: 2rem 4rem;
+    padding: 1rem 2rem;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.subtitle{
+    font-size: 1.5rem;
+}
+
+.paragraph{
+    color: var(--light-black);
+    font-size: 1rem;
 }
 
 /* HEADER SECTION */
-header{
-    background-color: var(--white);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow:  rgba(0,0,0,0.1);
+header button,
+.nav-mobile ul,
+.nav{
+    display: none;
 }
 
+header, footer{
+    background-color: var(--light-blue);
+}
+
+header h1{
+    font-size: 1.6rem;
+}
 
 .logo{
+    width: 100%;
+    color: var(--blue);
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin: 0;
+    justify-content: center;
 }
 
 .logo-img{
-    width: 4rem;
+    width: 5rem;
+    object-fit: contain;
 }
 
-.logo h1{
-    font-size: 2rem;
-    color: var(--blue);
+/* MAIN SECTION */
+main, footer{
 }
 
-nav{
-    flex: 2;
+section{
+    min-height: 90vh;
+    padding: 2rem;
+    background-color: var(--white);
 }
 
-.nav{
-    list-style: none;
+section:nth-child(1),
+section:nth-child(3){
+    background-color:var(--light-gray);
+}
+
+
+/* top section */
+.top{
     display: flex;
-    justify-content: center;
-    gap: 4rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
-.nav__li a{
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--black);
-    cursor: pointer;
-    font-size: 1.5rem;
-    font-weight: 400;
-    transition: color .5s ease;
+.top__text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-.nav__li a:hover{
+.since{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
     color: var(--blue);
+    font-weight: bold;
+    font-size: 1.2rem;
 }
+
+.top__text-title{
+    font-size: 2rem;
+}
+
 
 .btn{
-    cursor: pointer;
+    background-color: var(--yellow);
     border: none;
     outline: none;
-    border-radius: 3rem;
-    padding: 1rem 2rem;
-    background-color: var(--yellow);
-    transition: background-color .5s ease;
+    border-radius: 2rem;
+    padding: 2rem 3rem;
+    font-size: 1.1rem;
+    width: 25rem;
+    transition: background-color .5s ease-in;
 }
+
 
 .btn:hover{
     background-color: var(--light-yellow);
 }
 
 .btn a{
-    color: var(--white);
+    color: var(--black);
+    font-weight: bold;
     text-decoration: none;
+    transition: background-color .5s ease-in, color .5s ease-in;
 }
 
-/* MAIN SECTION */
-main{
-    display: flex;
-    flex-direction: column;
-    gap: 8rem;
+.top__img{
+    flex: 1;
+    width: 80%;
+    margin-bottom: -2.5rem;
 }
 
-/* top section */
-.top{
-    height: 90vh;
-    background-color: var(--light-gray);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: -2rem -4rem;
+.top__img img{
+    width: 100%;
 }
 
-.top > div{
-    margin: 2rem 4rem;
-}
-
-.top__text{
+/* services section */
+.services{
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.top__text-title{
-    font-size: 3rem;
+.services-top__text h4{
+    color: var(--orange);
 }
 
-.top__text p{
-    font-size: 1.2rem;
-}
-
-.since{
-    display: flex;
+.card{
+    background-color: var(--light-gray);
+    padding: 2rem;
+    display: grid;
     gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 50px 7px rgba(0,0,0,0.1);
 }
 
-.since p{
-    text-transform: uppercase;
-    color: var(--blue);
-    font-size: 1.5rem;
+.card__img{
+    width: 5rem;
+    justify-self: center;
+    margin-bottom: 2rem;
 }
 
+.card h4{
+    text-align: center;
+}
 
-.top-btn{
-    padding: 2rem 4rem;
-    width: fit-content;
+.card p{ 
+    text-align: start;
 }
 
 /* experience section */
-.experience__imgs img{
-    max-width: 30rem;
-    border-radius: 1rem;
-}
 .experience{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .experience__imgs{
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
-.experience__img{
-    width: 100%;
+.experience .experience__imgs img{
+    width: 80%;
 }
-
 
 .experience__text{
-    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
-
-.experience__text h2{
-    font-size: 3rem;
+    gap: 2rem;
 }
 
 .experience-item{
     display: flex;
     align-items: start;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .experience-item img{
-    background-color: #E8F7FF;
-    padding: 1rem;
+    background-color: var(--light-blue);
     border-radius: 50%;
+    padding: .5rem;
+    width: 3rem;
 }
 
-.subtitle{
-    font-size: 2rem;
-    font-weight: 400;
+.experience-content h4{
+    margin-bottom: .5rem;
 }
 
-.paragraph{
-    font-size: 1.2rem;
-    color: var(--light-black);
-}
-
-/* Services section */
-.services{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-row: 10rem 10rem;
-    gap: 4rem;
-    color: var(--light-black);
-}
-
-.services h2{
-    font-size: 3.5rem;
-    grid-column: 1 / 3;
-}
-
-.services-top__text{
-    grid-column: 3 / 5;
-}
-
-
-.services-top__text h4{
-    color: var(--orange);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.services-top__text p{
-    font-size: 1.2rem;
-}
-
-.card{
-    background-color:  var(--light-gray);
-    padding: 2rem;
-    border-radius: 1rem;
+/* contact section */
+.contact{
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
+    gap: 2rem;
 }
 
-.card p{
+.contact__info{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--blue);
 }
 
-.services .card img{
-    width: 7rem;
+.contact__info span{
+    color: var(--black);
 }
 
 /* FOOTER SECTION */
 footer{
-    background-color: var(--dark-blue);
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: var(--white);
-}
-
-section{
-    margin: 10rem 0;
 }
